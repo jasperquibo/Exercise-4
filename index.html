@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, skyblue, black, royalblue);
+            background-size: 300% 300%;
+            animation: backgroundShift 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 450px;
+            padding: 20px;
+            background: linear-gradient(30deg, white, gray);
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .groupField {
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .groupField label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+
+        .groupField input,
+        .groupField select {
+            width: 90%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #buttonArea {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #buttonArea button {
+            width: 120px;
+            padding: 10px;
+            background-color: skyblue;
+            border: none;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #buttonArea button:hover {
+            background-color: #80ed99;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <div id="container">
+            <h3>Registration</h3>
+
+            <div class="groupField">
+                <label for="Firstname">Enter Firstname:</label>
+                <input type="text" id="Firstname" name="firstname" required>
+            </div>
+
+            <div class="groupField">
+                <label for="Middlename">Enter Middlename:</label>
+                <input type="text" id="Middlename" name="middlename" required>
+            </div>
+
+            <div class="groupField">
+                <label for="Lastname">Enter Lastname:</label>
+                <input type="text" id="Lastname" name="lastname" required>
+            </div>
+
+            <div class="groupField">
+                <label for="suffix">Select Suffix:</label>
+                <select id="suffix" name="suffix">
+                    <option value="">None</option>
+                    <option>Jr.</option>
+                    <option>Sr.</option>
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                </select>
+            </div>
+
+            <div class="groupField">
+                <label for="Birthdate">Pick Birthdate:</label>
+                <input type="date" id="Birthdate" name="birthdate" required>
+            </div>
+
+            <div class="groupField">
+                <label for="Email">Enter Email Address:</label>
+                <input type="email" id="Email" name="email" required>
+            </div>
+
+            <small>User Account Information</small>
+
+            <div class="groupField">
+                <label for="Username">Enter Username:</label>
+                <input type="text" id="Username" name="username" required>
+            </div>
+
+            <div class="groupField">
+                <label for="Password">Enter Password:</label>
+                <input type="password" id="Password" name="password" required>
+            </div>
+
+            <div id="buttonArea">
+                <button type="reset">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
